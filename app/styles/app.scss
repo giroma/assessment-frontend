@@ -1,2 +1,76 @@
 // Style files in the pods folder are automatically loaded in.
 @import 'pod-styles';
+
+@import url('https://fonts.googleapis.com/css?family=Quantico');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+*, :after, :before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'source sans pro', sans-serif;
+}
+$dark-blue: #0d3244;
+$light-blue: #074a5f;
+$white: #ffffff;
+
+nav {
+  width: 100%;
+  height: 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  background: $dark-blue;
+  text-align: center;
+  font-size: 15px;
+  div{
+    
+  }
+  a{
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+  }
+  & .left-nav{
+    float: left;
+    a {
+      border-right: 1px solid $light-blue;
+    }
+  }
+  & .image-nav{
+  }
+  & .right-nav{
+    float: right;
+  }
+}
+
+.glyphicon-nav {
+ width: 24px;
+ padding: 8px 0;
+ position: relative;
+ display: inline-block;
+}
+.glyphicon-nav:before {
+ content: '';
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ left: 0;
+ border-top: 2px solid $white;
+ border-bottom: 2px solid $white;
+ top: 0px;
+}
+.glyphicon-nav:after {
+ content: '';
+ position: absolute;
+ top: 7px;
+ left: 0px;
+ height: 2px;
+ width: 100%;
+ background: $white;
+}
