@@ -7,9 +7,27 @@
 <table>
   {{#each productData as |data|}}
     <tr>
+      <td>{{data.m_ticker}}</td>
       <td>{{data.ticker}}</td>
       <td>{{data.comp_name}}</td>
+      <td>{{data.comp_name_2}}</td>
+      <td>{{data.exchange}}</td>
+      <td>{{data.currency_code}}</td>
       <td>{{data.per_end_date}}</td>
+      <td>{{data.per_type}}</td>
+      <td>{{data.per_code}}</td>
+      <td>{{data.per_fisc_year}}</td>
+      <td>{{data.per_fisc_qtr}}</td>
+      <td>{{data.per_cal_year}}</td>
+      <td>{{data.per_cal_qtr}}</td>
+      <td>{{data.rev_type}}</td>
+      <td>{{data.rev_type_desc}}</td>
+      <td>{{data.broker_name}}</td>
+      <td>{{data.analyst_name}}</td>
+      <td>{{data.eps_rev_date}}</td>
+      <td>{{data.eps_rev_est}}</td>
+      <td>{{data.eps_rev_date_prev}}</td>
+      <td>{{data.eps_rev_est_prev}}</td>
     </tr>
   {{/each}}
 </table>

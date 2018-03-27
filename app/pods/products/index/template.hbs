@@ -6,9 +6,17 @@
   <table>
     {{#each product.productDataSubset as |data|}}
       <tr>
+        <td>{{data.m_ticker}}</td>
         <td>{{data.ticker}}</td>
         <td>{{data.comp_name}}</td>
+        <td>{{data.comp_name_2}}</td>
+        <td>{{data.exchange}}</td>
+        <td>{{data.currency_code}}</td>
         <td>{{data.per_end_date}}</td>
+        <td>{{data.per_type}}</td>
+        <td>{{data.per_code}}</td>
+        <td>{{data.per_fisc_year}}</td>
+        <td>{{data.per_fisc_qtr}}</td>
       </tr>
     {{/each}}
   </table>
