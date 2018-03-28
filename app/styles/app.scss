@@ -1,76 +1,123 @@
 // Style files in the pods folder are automatically loaded in.
 @import 'pod-styles';
+@import 'content';
+@import 'sidebar';
 
 @import url('https://fonts.googleapis.com/css?family=Quantico');
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
 
-*, :after, :before{
+*, ::after, ::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 100%;
 }
-
 body {
-  font-family: 'source sans pro', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
+    line-height: 1;
 }
+// Colors
 $dark-blue: #0d3244;
 $light-blue: #074a5f;
-$white: #ffffff;
+$blue-gray: #edf1f5;
 
 nav {
-  width: 100%;
-  height: 56px;
+  background-color: $dark-blue;
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-  background: $dark-blue;
-  text-align: center;
-  font-size: 15px;
-  div{
-    
-  }
-  a{
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+  a {
     color: white;
-    text-decoration: none;
+    display: flex;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 15px;
     padding: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
   }
-  & .left-nav{
-    float: left;
-    a {
-      border-right: 1px solid $light-blue;
+  & .left-nav {
+    cursor: default;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0px;
+    padding: 0px;
+    & a {
+      border-right: 1px $light-blue solid;
+    }
+    & .active {
+      background: $light-blue;
     }
   }
-  & .image-nav{
+  & .image-nav {
+    display: flex;
+    height: 56px;
+    left: 50%;
+    margin: 0px;
+    padding: 0px;
+    position: absolute;
+    transform: matrix(1, 0, 0, 1, -52, 0);;
+    a{
+      padding: 0;
+    }
   }
-  & .right-nav{
-    float: right;
+  & .right-nav {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0px;
+    padding: 0px;
+    width: 420.797px;
   }
 }
 
+.title-header {
+  background-color: $light-blue;
+  color: white;
+  display: flex;
+  align-items: flex-start;
+  padding: 1.5px 0;
+  & .avatar {
+    width: 56px;
+    padding: 15px 0;
+    justify-content: center;
+    margin: 0 10px 0 20px;
+  }
+  & span {
+    font-family: 'Quantico';
+    font-size: 30px;
+    font-weight: 700;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    justify-content: center;
+  }
+}
+
+// top left drop down button styling bellow
 .glyphicon-nav {
- width: 24px;
- padding: 8px 0;
- position: relative;
- display: inline-block;
+  width: 24px;
+  padding: 8px 0;
+  position: relative;
+  display: inline-block;
 }
 .glyphicon-nav:before {
- content: '';
- position: absolute;
- width: 100%;
- height: 100%;
- left: 0;
- border-top: 2px solid $white;
- border-bottom: 2px solid $white;
- top: 0px;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+  top: 0px;
 }
 .glyphicon-nav:after {
- content: '';
- position: absolute;
- top: 7px;
- left: 0px;
- height: 2px;
- width: 100%;
- background: $white;
+  content: '';
+  position: absolute;
+  top: 7px;
+  left: 0px;
+  height: 2px;
+  width: 100%;
+  background: white;
 }
