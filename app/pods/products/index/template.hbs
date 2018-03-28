@@ -1,25 +1,28 @@
-<h3>Datasets for {{publisher.title}}</h3>
-
+<p>Datasets for {{publisher.title}}</p>
+<!-- loops over each of the 2 products -->
 {{#each products as |product|}}
-  <h4>{{link-to product.name 'products.show' product.id}}</h4>
+  <div class="product-data">
 
-  <table>
-    {{#each product.productDataSubset as |data|}}
+    <div class="table-header"><span>{{product.name}}</span><span class="expand">{{link-to "EXPAND" 'products.show' product.id}}</span></div>
+
+    <table>
       <tr>
-        <td>{{data.m_ticker}}</td>
-        <td>{{data.ticker}}</td>
-        <td>{{data.comp_name}}</td>
-        <td>{{data.comp_name_2}}</td>
-        <td>{{data.exchange}}</td>
-        <td>{{data.currency_code}}</td>
-        <td>{{data.per_end_date}}</td>
-        <td>{{data.per_type}}</td>
-        <td>{{data.per_code}}</td>
-        <td>{{data.per_fisc_year}}</td>
-        <td>{{data.per_fisc_qtr}}</td>
+        <!-- select first product and use its keys as the column names -->
+        {{#each-in product.productDataSubset.[1] as |key|}}
+        <th>{{key}}</th>
+        {{/each-in}}
       </tr>
-    {{/each}}
-  </table>
+      {{#each product.productDataSubset as |data|}}
+      <tr>
+        <!-- loop over each value in the object -->
+        {{#each-in data as |key value|}}
+        <td>{{value}}</td>
+        {{/each-in}}
+      </tr>
+      {{/each}}
+    </table>
+    <div class="table-footer">sample rows</div>
+  </div>
 {{/each}}
 
 {{outlet}}
