@@ -1,5 +1,97 @@
-.sidebar{
-  background-color: grey;
-  width: 400px;
-  padding: 20px;
+.sidebar {
+    width: 400px;
+    color: $dark-blue;
+    box-sizing:border-box;
+    display:flex;
+    flex-basis: 400px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin:  0px;
+    padding: 20px;
+    border-left: solid 1px $grey-border;
+    transition-delay: 0s;
+    transition-duration: 1s;
+    transition-property: width;
+    transition-timing-function: ease;
+    -webkit-font-smoothing: antialiased;
+    & .green-title {
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 600;
+        color: $green;
+        text-transform: uppercase;
+        border: solid 2px $green;
+        padding: 3px 7px;
+        border-radius: 3px;
+        width: auto;
+        line-height: 14px;
+        margin: 0 0 20px 0;
+    }
+    h3 {
+        font-family: 'Quantico';
+        font-size: 14px;
+        text-transform: uppercase;
+        margin: 0 0 10px 0;
+    }
+    p {
+        font-size: 18px;
+        line-height: 22px;
+        margin: 0 0 20px 0;
+        text-size-adjust: 100%;
+    }
+    & .side-bar-table {
+        margin: 0 0 20px 0;
+        width: 100%;
+        & .table-row {
+            position: relative;
+            padding: 15px 0;
+            border-bottom: solid 1px $grey-border;
+            & .label {
+                text-transform: uppercase;
+                display: inline-block;
+                font-weight: 700;
+                font-size: 13px;
+                color: $grey-text;
+            }
+            & .value {
+                position: absolute;
+                right: 0;
+                font-family: 'Quantico';
+                display: inline-block;
+                text-transform: capitalize;
+                color: $light-blue;
+            }
+        }
+        & .table-row:last-child {
+            border: none;
+        }
+    }
+    & .info {
+        color: $cyan;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 600;
+        padding-left: 10px;
+    }
+    & .tables-api-btn {
+        position: relative;
+        font-size: 18px;
+        border: solid 1px $blue;
+        padding: 7px;
+        margin: 0 0 25px 0;
+        & .info {
+            position: absolute;
+            right: 10px;
+            line-height: 18px;
+        }
+    }
+    button {
+        color: white;
+        font-family: 'Quantico';
+        font-weight: 700;
+        text-transform: uppercase;
+        width: 100%;
+        padding: 7px 0;
+        background-color: $blue-button;
+    }
 }
