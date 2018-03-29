@@ -53,11 +53,12 @@ main{
     }
   }
   & .table-header{
-    padding: 15px;
+    padding: 16px;
     span{
       color: $dark-blue;
-      font-weight: bolder;
       font-family: 'Quantico';
+      font-size: 17px;
+      font-weight: 700;
       display: inline-block;
     }
     & .expand{

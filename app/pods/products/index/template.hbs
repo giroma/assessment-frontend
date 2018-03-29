@@ -1,12 +1,10 @@
 <main>
   <div class="content">
     <p>Datasets for {{publisher.title}}</p>
-    <!-- loops over each of the 2 products -->
+    {{!loops over each of the 2 products}}
     {{#each products as |product|}}
     <div class="product-data">
-
       <div class="table-header"><span>{{product.name}}</span><span class="expand">{{link-to "EXPAND" 'products.show' product.id}}</span></div>
-
       <table>
         <tr>
           <!-- select first product and use its keys as the column names -->
@@ -16,7 +14,7 @@
         </tr>
         {{#each product.productDataSubset as |data|}}
         <tr>
-          <!-- loop over each value in the object -->
+          {{!loop over each value in the object}}
           {{#each-in data as |key value|}}
           <td>{{value}}</td>
           {{/each-in}}
@@ -26,7 +24,6 @@
       <div class="table-footer">sample rows</div>
     </div>
     {{/each}}
-
   </div>
   <div class="sidebar">
     {{side-bar publisher=model.publisher}}

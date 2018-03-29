@@ -1,18 +1,22 @@
 <div class="full-table">
   <table>
     <tr>
-      <!-- select first product and use its keys as the column names -->
+      <th class="count-column"></th>
+      {{!select first product and use its keys as the column names}}
       {{#each-in productData.[1] as |key|}}
       <th>{{key}}</th>
       {{/each-in}}
     </tr>
-    {{#each productData as |data|}}
+    {{#each productData as |data index|}}
       <tr>
-        {{#each-in data as |key value|}}
+        <td class="count-column">{{index}}</td>
+
+        {{#each-in data as |key value index|}}
           <td>{{value}}</td>
         {{/each-in}}
       </tr>
     {{/each}}
   </table>
+  <div class="table-footer">sample rows</div>
 </div>
 {{outlet}}
