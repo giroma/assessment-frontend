@@ -1,35 +1,18 @@
-<h3>Sub-Product Page</h3>
-
-{{link-to 'Product page' 'products'}}
-
-<h4>{{product.name}}</h4>
-
-<table>
-  {{#each productData as |data|}}
+<div class="full-table">
+  <table>
     <tr>
-      <td>{{data.m_ticker}}</td>
-      <td>{{data.ticker}}</td>
-      <td>{{data.comp_name}}</td>
-      <td>{{data.comp_name_2}}</td>
-      <td>{{data.exchange}}</td>
-      <td>{{data.currency_code}}</td>
-      <td>{{data.per_end_date}}</td>
-      <td>{{data.per_type}}</td>
-      <td>{{data.per_code}}</td>
-      <td>{{data.per_fisc_year}}</td>
-      <td>{{data.per_fisc_qtr}}</td>
-      <td>{{data.per_cal_year}}</td>
-      <td>{{data.per_cal_qtr}}</td>
-      <td>{{data.rev_type}}</td>
-      <td>{{data.rev_type_desc}}</td>
-      <td>{{data.broker_name}}</td>
-      <td>{{data.analyst_name}}</td>
-      <td>{{data.eps_rev_date}}</td>
-      <td>{{data.eps_rev_est}}</td>
-      <td>{{data.eps_rev_date_prev}}</td>
-      <td>{{data.eps_rev_est_prev}}</td>
+      <!-- select first product and use its keys as the column names -->
+      {{#each-in productData.[1] as |key|}}
+      <th>{{key}}</th>
+      {{/each-in}}
     </tr>
-  {{/each}}
-</table>
-
+    {{#each productData as |data|}}
+      <tr>
+        {{#each-in data as |key value|}}
+          <td>{{value}}</td>
+        {{/each-in}}
+      </tr>
+    {{/each}}
+  </table>
+</div>
 {{outlet}}
