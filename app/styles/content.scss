@@ -29,13 +29,16 @@ main{
     font-size: 12px;
     th, td{
       text-align: left;
-      padding: 10px 0px 2px 10px;
+      padding: 10px 23px 2px 10px;
       border-bottom: solid 1px $grey-border;
+      width: 10px;
     }
     th{
       background: $background-color;
       font-weight: bolder;
       height: 30px;
+      border-top: solid 1px $grey-border;
+      padding-bottom: 10px;
     }
     td{
       font-weight: lighter;
@@ -72,6 +75,5 @@ main{
     height: 30px;
     padding: 8px;
     text-transform: uppercase;
-    font-weight: bolder;
   }
 }

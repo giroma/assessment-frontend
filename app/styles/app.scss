@@ -1,11 +1,11 @@
 // Style files in the pods folder are automatically loaded in.
 @import 'pod-styles';
 @import 'colors';
+@import url('https://fonts.googleapis.com/css?family=Quantico');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
 @import 'content';
 @import 'sidebar';
 
-@import url('https://fonts.googleapis.com/css?family=Quantico');
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
 
 *, ::after, ::before {
   margin: 0;
