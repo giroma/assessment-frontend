@@ -1,23 +1,24 @@
-<nav>
-  <div class="left-nav">
-    <a href="#"><span class="glyphicon glyphicon-nav" aria-hidden="true"></span></a>
-    <a href="#">ALTERNATIVE DATA</a>
-    <a class='active' href="#">CORE FINANCIAL DATA</a>
-  </div>
+{{#unless isHiddenNavRoute}} {{! dont show nav bar on some routes}}
+  <nav>
+    <div class="left-nav">
+      <a href="#"><span class="glyphicon glyphicon-nav" aria-hidden="true"></span></a>
+      <a href="#">ALTERNATIVE DATA</a>
+      <a class='active' href="#">CORE FINANCIAL DATA</a>
+    </div>
 
-  <div class="image-nav">
-    <a href="#"><img src='../assets/quandl-logo.svg'></a>
-  </div>
+    <div class="image-nav">
+      <a href="#"><img src='../assets/quandl-logo.svg'></a>
+    </div>
 
-  <div class="right-nav">
-    <a href="#">DOCS & HELP</a>
-    <a href="#">BLOG</a>
-    <a href="#">SIGN IN</a>
+    <div class="right-nav">
+      <a href="#">DOCS & HELP</a>
+      <a href="#">BLOG</a>
+      <a href="#">SIGN IN</a>
+    </div>
+  </nav>
+  <div class="title-header">
+      <img src="../assets/avatar.png" class="avatar" />
+      <span class="title">Data Publisher</span>
   </div>
-</nav>
-<div class="title-header">
-    <img src="../assets/avatar.png" class="avatar" />
-    <span class="title">Data Publisher</span>
-</div>
-
+  {{/unless}}
 {{outlet}}
