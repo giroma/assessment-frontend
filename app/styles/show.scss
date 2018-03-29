@@ -91,10 +91,11 @@
   table{
     display: block;
     overflow: scroll;
+
     font-family: 'Source Sans Pro', sans-serif;
     border-collapse: collapse;
     font-size: 12px;
-    height: 100%;
+    height: calc(100% - 223px;);
     th, td{
       text-align: left;
       white-space: nowrap;
