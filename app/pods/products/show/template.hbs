@@ -27,9 +27,9 @@
     </tr>
     {{#each productData as |data index|}}
       <tr>
-        <td class="count-column">{{index}}</td>
+        <td class="count-column">{{plus-one index}}</td>
 
-        {{#each-in data as |key value index|}}
+        {{#each-in data as |key value|}}
           <td>{{value}}</td>
         {{/each-in}}
       </tr>
