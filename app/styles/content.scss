@@ -2,9 +2,10 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
 
 
-.main{
+main{
   background-color: white;
-  display: inline-block;
+  display: flex;
+  -webkit-font-smoothing: antialiased;
 }
 $grey-text: #97a0a9;
 $grey-border: #d0d8df;
@@ -12,8 +13,15 @@ $background-color: #F6FAFD;
 $dark-blue: #0d3244;
 
 .content{
+  display: flex;
+  flex-basis: auto;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 1;
+  max-width: 100%;
   padding: 24px 20px;
   background: $background-color;
+  width: 400px;
   p{
     font-size: 14px;
     color: $grey-text;
@@ -22,21 +30,23 @@ $dark-blue: #0d3244;
     padding-top: 10px;
   }
   table{
-    table-layout: fixed;
-    width: 100%;
+    display: block;
+    overflow: hidden;
     font-family: 'Source Sans Pro', sans-serif;
-    overflow: scroll;
     border-collapse: collapse;
     font-size: 12px;
     th, td{
       text-align: left;
-      width: 100px;
-      padding: 5px;
+      padding: 10px 0px 2px 10px;
       border-bottom: solid 1px $grey-border;
     }
     th{
       background: $background-color;
       font-weight: bolder;
+      height: 30px;
+    }
+    td{
+      font-weight: lighter;
     }
   }
   & .product-data{
@@ -67,6 +77,7 @@ $dark-blue: #0d3244;
   & .table-footer{
     font-size: 12px;
     color: $dark-blue;
+    height: 30px;
     padding: 8px;
     text-transform: uppercase;
     font-weight: bolder;
