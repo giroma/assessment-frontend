@@ -1,19 +1,19 @@
 {{#unless isHiddenNavRoute}} {{! dont show nav bar on some routes}}
   <nav>
     <div class="left-nav">
-      <a href="#"><span class="glyphicon glyphicon-nav" aria-hidden="true"></span></a>
-      <a href="#">ALTERNATIVE DATA</a>
-      <a class='active' href="#">CORE FINANCIAL DATA</a>
+      <a href="#"{{action "click"}}><span class="glyphicon glyphicon-nav" aria-hidden="true"></span></a>
+      <a href="#"{{action "click"}}>ALTERNATIVE DATA</a>
+      <a class='active' href="#"{{action "click"}}>CORE FINANCIAL DATA</a>
     </div>
 
     <div class="image-nav">
-      <a href="#"><img src='../assets/quandl-logo.svg'></a>
+      <a href="#"{{action "click"}}><img src='../assets/quandl-logo.svg'></a>
     </div>
 
     <div class="right-nav">
-      <a href="#">DOCS & HELP</a>
-      <a href="#">BLOG</a>
-      <a href="#">SIGN IN</a>
+      <a href="#"{{action "click"}}>DOCS & HELP</a>
+      <a href="#"{{action "click"}}>BLOG</a>
+      <a href="#"{{action "click"}}>SIGN IN</a>
     </div>
   </nav>
   <div class="title-header">

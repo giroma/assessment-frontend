@@ -1,6 +1,93 @@
 .full-table{
-  position: relative;
   height: 100vh;
+  .title-header {
+    &.show {
+      font-family: 'Quantico';
+      background-color: $light-blue;
+      color: white;
+      display: flex;
+      align-items: center;
+      & .avatar {
+        width: 45px;
+        padding: 10px 0;
+        justify-content: center;
+        margin: 0 10px 0 10px;
+      }
+      & span {
+        font-size: 18px;
+        font-weight: 400;
+        padding: 9px 0;
+        justify-content: center;
+      }
+      & .left-arrow {
+        font-family: 'Source Sans Pro';
+          & a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px 0 20px;
+            padding: 0;
+            font-size: 50px;
+          }
+      }
+    }
+  }
+  .dataset-name {
+    border-bottom: solid 1px $grey-border;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $dark-blue;
+    padding: 15px;
+    font-family: 'Quantico';
+    font-size: 22px;
+    color-background: white;
+    & button {
+      font-family: "Quantico";
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      -webkit-font-smoothing: antialiased;
+      text-transform: uppercase;
+      // float: right;
+      padding: 5px 15px;
+      margin: 0 7px;
+      &.silhouete {
+        right: 0;
+        color: $cyan;
+        background-color: white;
+        border: solid 1px $cyan;
+      }
+      &.full {
+        border: solid 1px $cyan;
+        color: white;
+        background-color: $cyan;
+        & .down-arrow {
+          font-size: 12px;
+          color: $off-cyan;
+          padding: 0 0 0 10px;
+        }
+      }
+    }
+  }
+  .data-sample {
+    margin: 0 0 0 40px;
+    padding: 20px 0 20px 0;
+    font-family: 'Source Sans Pro';
+    font-weight: 600;
+    text-transform: uppercase;
+    & a {
+      padding: 0 15px 15px 15px;
+      text-decoration: none;
+      color: $grey-text;
+      font-weight: 400;
+      &.active {
+        font-weight: 700;
+        color: $cyan;
+        border-bottom: solid 3px $cyan;
+        -webkit-font-smoothing: antialiased;
+      }
+    }
+  }
   table{
     display: block;
     overflow: scroll;
@@ -11,6 +98,8 @@
     th, td{
       text-align: left;
       white-space: nowrap;
+      overflow: hidden;
+      max-width: 130px;
     }
     & .count-column{
       padding: 0;

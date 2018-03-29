@@ -1,4 +1,22 @@
 <div class="full-table">
+  <div class="title-header show">
+    <span class="left-arrow">{{link-to '‹' 'products'}}</span>
+    <img src="../assets/avatar.png" class="avatar" />
+    <span class="title">Data Publisher</span>
+  </div>
+  <div class="dataset-name"><h4>{{product.name}}</h4>
+    <div class="primary-buttons">
+      <button class="silhouete"{{action "click"}}>Coverage</button>
+      <button class="full"{{action "click"}}>Download <span class="down-arrow">&#9660;</span></button>
+    </div>
+  </div>
+  <div class="data-sample">
+    <div class="tab-buttons">
+      <a class="active" href="#"{{action "click"}}>Data Sample</a>
+      <a href="#"{{action "click"}}>Coverage</a>
+    </div>
+  </div>
+
   <table>
     <tr>
       <th class="count-column"></th>
